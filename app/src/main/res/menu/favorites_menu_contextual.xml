@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:tools="http://schemas.android.com/tools"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item android:id="@+id/delete_favorite_activity_menu"
+        android:title="@string/delete_activity_menu"
+        android:icon="@drawable/ic_delete"
+        android:iconTint="@color/white"
+        app:showAsAction="ifRoom"
+        tools:targetApi="o" />
+    <item android:id="@+id/shareFavorite"
+        android:title="@string/share"
+        android:icon="@drawable/ic_share"
+        app:showAsAction="ifRoom"
+        android:iconTint="@color/white"
+        tools:targetApi="o" />
+
+</menu>

@@ -1,0 +1,251 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/backgroundColor"
+        tools:context=".ui.HomeBottomSheet">
+
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="36dp"
+            android:layout_marginTop="16dp"
+            android:text="@string/type"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <HorizontalScrollView
+            android:id="@+id/activityType_ScrollView"
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="24dp"
+            android:scrollbars="none"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView2">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <com.google.android.material.chip.ChipGroup
+                    android:id="@+id/activityTypeChipGroup"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    app:checkedChip="@id/recreationalChip"
+                    app:selectionRequired="true"
+                    app:singleLine="true"
+                    app:singleSelection="true">
+
+                    <com.google.android.material.chip.Chip
+                        android:id="@+id/recreationalChip"
+                        style="@style/CustomChipStyle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/recreational" />
+
+                    <com.google.android.material.chip.Chip
+                        android:id="@+id/cookingChip"
+                        style="@style/CustomChipStyle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/cooking" />
+
+                    <com.google.android.material.chip.Chip
+                        android:id="@+id/busyworkChip"
+
+                        style="@style/CustomChipStyle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/busywork" />
+
+                    <com.google.android.material.chip.Chip
+                        android:id="@+id/educationChip"
+                        style="@style/CustomChipStyle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/education" />
+
+                    <com.google.android.material.chip.Chip
+                        android:id="@+id/SocialChip"
+                        style="@style/CustomChipStyle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/social" />
+
+                    <com.google.android.material.chip.Chip
+                        android:id="@+id/relaxationChip"
+                        style="@style/CustomChipStyle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/relaxation" />
+
+
+                </com.google.android.material.chip.ChipGroup>
+            </LinearLayout>
+
+        </HorizontalScrollView>
+
+
+        <SeekBar
+            android:id="@+id/seekBarMinPrice"
+            android:layout_width="217dp"
+            android:layout_height="34dp"
+            android:layout_marginStart="52dp"
+            android:max="100"
+            android:min="0"
+            android:progressTint="@color/backgroundColorSecond"
+            android:thumbTint="@color/textColor"
+            android:progress="0"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toEndOf="@+id/textView"
+            app:layout_constraintTop_toTopOf="@+id/textView" />
+
+        <SeekBar
+            android:id="@+id/seekBarMaxPrice"
+            android:layout_width="217dp"
+            android:layout_height="34dp"
+            android:layout_marginTop="44dp"
+            android:max="100"
+            android:min="0"
+            android:progressTint="@color/backgroundColorSecond"
+            android:thumbTint="@color/textColor"
+            android:progress="0"
+            app:layout_constraintEnd_toEndOf="@+id/seekBarMinPrice"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="@+id/seekBarMinPrice"
+            app:layout_constraintTop_toBottomOf="@+id/seekBarMinPrice" />
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="36dp"
+            android:layout_marginTop="44dp"
+            android:text="Price"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/activityType_ScrollView" />
+
+        <TextView
+            android:id="@+id/textView3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="132dp"
+            android:text="Participant"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView" />
+
+        <SeekBar
+            android:id="@+id/seekBarParticipant"
+            android:layout_width="217dp"
+            android:layout_height="34dp"
+            android:max="5"
+            android:min="1"
+            android:progressTint="@color/backgroundColorSecond"
+            android:thumbTint="@color/textColor"
+            android:progress="1"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.612"
+            app:layout_constraintStart_toEndOf="@+id/textView3"
+            app:layout_constraintTop_toTopOf="@+id/textView3" />
+
+        <TextView
+            android:id="@+id/participantCountTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:text=""
+            android:textAlignment="center"
+            android:textSize="15sp"
+            app:layout_constraintEnd_toEndOf="@+id/seekBarParticipant"
+            app:layout_constraintStart_toStartOf="@+id/seekBarParticipant"
+            app:layout_constraintTop_toBottomOf="@+id/seekBarParticipant" />
+
+        <Button
+            android:id="@+id/applyButton"
+            android:layout_width="376dp"
+            android:layout_height="67dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="24dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginBottom="170dp"
+            android:text="@string/apply"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.533"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/participantCountTextView"
+            app:layout_constraintVertical_bias="0.238" />
+
+        <TextView
+            android:id="@+id/minPriceTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="12dp"
+            android:textSize="18sp"
+            app:layout_constraintBottom_toBottomOf="@+id/seekBarMinPrice"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.272"
+            app:layout_constraintStart_toEndOf="@+id/seekBarMinPrice"
+            app:layout_constraintTop_toTopOf="@+id/seekBarMinPrice" />
+
+        <TextView
+            android:id="@+id/maxPriceTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="18sp"
+            app:layout_constraintBottom_toBottomOf="@+id/seekBarMaxPrice"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.466"
+            app:layout_constraintStart_toEndOf="@+id/seekBarMaxPrice"
+            app:layout_constraintTop_toTopOf="@+id/seekBarMaxPrice"
+            app:layout_constraintVertical_bias="0.83" />
+
+        <TextView
+            android:id="@+id/textView5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            android:text="Min"
+            android:textAlignment="center"
+            app:layout_constraintBottom_toTopOf="@+id/seekBarMinPrice"
+            app:layout_constraintEnd_toStartOf="@+id/minPriceTextView"
+            app:layout_constraintHorizontal_bias="0.387"
+            app:layout_constraintStart_toStartOf="@+id/seekBarMinPrice"
+            app:layout_constraintTop_toBottomOf="@+id/activityType_ScrollView"
+            app:layout_constraintVertical_bias="1.0" />
+
+        <TextView
+            android:id="@+id/textView6"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Max"
+            app:layout_constraintBottom_toTopOf="@+id/seekBarMaxPrice"
+            app:layout_constraintEnd_toEndOf="@+id/seekBarMaxPrice"
+            app:layout_constraintHorizontal_bias="0.421"
+            app:layout_constraintStart_toStartOf="@+id/seekBarMaxPrice"
+            app:layout_constraintTop_toBottomOf="@+id/seekBarMinPrice" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

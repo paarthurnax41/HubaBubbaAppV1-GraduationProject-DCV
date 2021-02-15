@@ -1,0 +1,21 @@
+<resources>
+    <string name="app_name">HubaBubbaApp</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="home_screen">Home Screen</string>
+    <string name="favorites">Favorites</string>
+    <string name="jokes">Jokes</string>
+    <string name="type">Type</string>
+    <string name="recreational">Recreational</string>
+    <string name="cooking">Cooking</string>
+    <string name="busywork">Busywork</string>
+    <string name="education">Education</string>
+    <string name="relaxation">Relaxation</string>
+    <string name="apply">Apply</string>
+    <string name="social">Social</string>
+    <string name="save_to_favorites">Save to Favorites</string>
+    <string name="no_favorites_added_yet">No Favorites added yet !</string>
+    <string name="delete_activity_menu">Delete Activity Menu</string>
+    <string name="delete_all">Delete All</string>
+    <string name="share">Share</string>
+</resources>
